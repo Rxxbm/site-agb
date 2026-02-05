@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-SEU-CODIGO-AQUI');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGB Refrigeração - Instalação e Manutenção</title>
+    <meta name="description" content="Técnico de Ar Condicionado e Refrigeração na Região dos Lagos. Instalação, conserto e manutenção.">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CORES */
+        :root {
+            --azul-escuro: #002D62;
+            --laranja: #FF6600;
+            --azul-claro: #E6F0FA;
+            --zap: #25d366;
+            --branco: #ffffff;
+            --amarelo-estrela: #FFD700;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--azul-claro); color: #333; padding-bottom: 90px; }
+        a { text-decoration: none; }
+
+        /* CABEÇALHO */
+        header {
+            background-color: var(--branco);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo { 
+            font-size: 20px; 
+            font-weight: 900; 
+            color: var(--azul-escuro); 
+            letter-spacing: -0.5px; 
+            text-transform: uppercase;
+        }
+        .logo span { color: var(--laranja); }
+        
+        .btn-header {
+            background-color: var(--azul-escuro);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* HERO */
+        .hero-container {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #fff, var(--azul-claro));
+        }
+
+        .frase-impacto {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+            font-weight: 600;
+            background-color: #fff;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .flyer-img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 4px solid white;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+
+        /* IDENTIFICAÇÃO TÉCNICO (NOVO) */
+        .identificacao-tecnico {
+            color: var(--azul-escuro);
+            font-weight: 900;
+            font-size: 1.3rem;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        /* BOTÕES */
+        .cta-box { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+            align-items: center; 
+            margin-top: 10px;
+            padding: 0 20px;
+        }
+        
+        .btn-big {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 450px;
+            padding: 16px;
+            border-radius: 50px;
+            font-size: 19px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .btn-big:active { transform: scale(0.98); }
+
+        .btn-whatsapp { background-color: var(--zap); border: 2px solid white; animation: pulsar 2s infinite; }
+        .btn-tel { background-color: var(--azul-escuro); }
+
+        /* SERVIÇOS */
+        .servicos-faixa { padding: 30px 20px; text-align: center; }
+        .servicos-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .tag-servico {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: var(--azul-escuro);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* AVALIAÇÕES */
+        .avaliacao-area {
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .reviews-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .card-review {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid var(--zap);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .estrelas { color: var(--amarelo-estrela); font-size: 20px; margin-bottom: 10px; }
+        .texto-review { font-style: italic; color: #555; margin-bottom: 15px; font-size: 0.95rem; line-height: 1.5; }
+        .autor-review { font-weight: bold; color: var(--azul-escuro); display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+        /* RODAPÉ */
+        footer {
+            background-color: var(--azul-escuro);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            padding-bottom: 100px;
+        }
+        
+        /* BOTÃO FLUTUANTE */
+        .float-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--zap);
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 9999;
+        }
+        @keyframes pulsar {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-SEU-CODIGO-AQUI"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">AGB <span>Refrigeração</span></div>
+        <a href="tel:5522998229249" class="btn-header"><i class="fas fa-phone"></i> Ligar</a>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero-container">
+        <h1 style="font-size: 1.4rem; color: var(--azul-escuro); margin-bottom: 10px;">Instalação, Conserto e Manutenção</h1>
+        
+        <p class="frase-impacto">Atendimento em toda região com agilidade</p>
+        
+        <img src="flyer-agb.jpg" alt="AGB Refrigeração - Técnico" class="flyer-img">
+
+        <div class="cta-box">
+            
+            <!-- TÍTULO DESTAQUE ACIMA DO BOTÃO -->
+            <div class="identificacao-tecnico">AGB REFRIGERAÇÃO - TÉCNICO</div>
+            
+            <a href="https://wa.me/5522998229249?text=Olá,%20vi%20o%20anúncio%20e%20preciso%20de%20um%20orçamento." class="btn-big btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+            </a>
+            <a href="tel:5522998229249" class="btn-big btn-tel">
+                <i class="fas fa-phone-alt"></i> Ligar (22) 99822-9249
+            </a>
+        </div>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos-faixa">
+        <h2 style="color: var(--azul-escuro); font-size: 1.2rem;">NOSSOS SERVIÇOS</h2>
+        <div class="servicos-grid">
+            <div class="tag-servico"><i class="fas fa-snowflake" style="color: var(--laranja);"></i> Instalação</div>
+            <div class="tag-servico"><i class="fas fa-tools" style="color: var(--laranja);"></i> Conserto</div>
+            <div class="tag-servico"><i class="fas fa-bolt" style="color: var(--laranja);"></i> Elétrica</div>
+        </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section class="avaliacao-area">
+        <h2 style="color: var(--azul-escuro); font-size: 1.2rem; margin-bottom: 25px;">O QUE DIZEM NOSSOS CLIENTES</h2>
+        
+        <div class="reviews-container">
+            <!-- Review 1 -->
+            <div class="card-review">
+                <div class="estrelas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="texto-review">
+                    "Capacitado, competente e educado. Resolveu com facilidade um problema do dreno do split onde outro instalador não teve a mesma capacidade. Agora sim estou de boa com o meu próprio 'clima de montanha' funcionando!"
+                </p>
+                <div class="autor-review">
+                    <i class="fas fa-user-circle" style="font-size: 24px; color: #ccc;"></i>
+                    Fábio Paranhos
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="card-review">
+                <div class="estrelas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="texto-review">
+                    "Foi muito satisfatório, ficou muito bom."
+                </p>
+                <div class="autor-review">
+                    <i class="fas fa-user-circle" style="font-size: 24px; color: #ccc;"></i>
+                    Gustavo Lobo
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="logo" style="margin-bottom: 15px; color: white;">AGB <span>Refrigeração</span></div>
+        <a href="https://instagram.com/agbservicos" style="color: white; font-size: 1.1rem; display: block; margin-bottom: 10px;">
+            <i class="fab fa-instagram"></i> @agbservicos
+        </a>
+        <p><i class="fas fa-phone"></i> (22) 99822-9249</p>
+        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">Atendemos Região dos Lagos/RJ</p>
+    </footer>
+
+    <a href="https://wa.me/5522998229249?text=Olá,%20gostaria%20de%20agendar%20um%20serviço." class="float-wa">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
