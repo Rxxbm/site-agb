@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conserto de Geladeira e Câmara Fria em Cabo Frio | AGB Refrigeração</title>
+<meta name="description" content="Conserto de geladeira, freezer e câmara fria em Cabo Frio, Búzios e São Pedro da Aldeia. Técnico especializado, atendimento rápido, orçamento grátis. Chame no WhatsApp!">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:    #0a7abf;
+    --blue-d:  #075a8e;
+    --blue-dd: #043d63;
+    --ice:     #e8f6ff;
+    --white:   #ffffff;
+    --dark:    #0d1f2d;
+    --gray:    #5a7384;
+    --lgray:   #f0f7fc;
+    --green-w: #25d366;
+    --green-wd:#1da851;
+    --accent:  #f59e0b;
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ── FLOATING WA BUTTON ── */
+  .wa-float {
+    position: fixed;
+    bottom: 24px; right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--green-w);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+    animation: pulse-wa 2.4s infinite;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .wa-float:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,211,102,0.55); }
+  .wa-float svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
+  @keyframes pulse-wa {
+    0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+    50%      { box-shadow: 0 6px 36px rgba(37,211,102,0.7); }
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--blue-dd);
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 13px;
+    color: #b8d9f0;
+    letter-spacing: 0.3px;
+  }
+  .topbar strong { color: #fff; }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border-bottom: 2px solid var(--ice);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(10,122,191,0.08);
+  }
+  .logo-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-icon {
+    width: 44px; height: 44px;
+    background: var(--blue);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--blue-dd);
+    line-height: 1.1;
+  }
+  .logo-text span {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green-w);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .header-cta:hover { background: var(--green-wd); }
+  .header-cta svg { width:18px; height:18px; fill:#fff; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--blue-dd) 0%, var(--blue-d) 50%, var(--blue) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 60px 24px 56px;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  /* ice crystals deco */
+  .hero::after {
+    content: '❄';
+    position: absolute;
+    font-size: 180px;
+    opacity: 0.04;
+    right: -20px;
+    top: -20px;
+    line-height: 1;
+    animation: spin-slow 30s linear infinite;
+  }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #b8d9f0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: clamp(32px, 7vw, 56px);
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .hero-sub {
+    font-size: clamp(16px, 3vw, 20px);
+    color: #a8cfe8;
+    margin-bottom: 32px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--green-w);
+    color: #fff;
+    font-weight: 800;
+    font-size: 17px;
+    padding: 16px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.55); }
+  .btn-wa svg { width:22px; height:22px; fill:#fff; }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.18); }
+
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+    animation: fadeUp 0.7s 0.4s ease both;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #a8cfe8;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .trust-item .icon { font-size: 16px; }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(20px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+
+  /* ── URGENCY BAR ── */
+  .urgency-bar {
+    background: var(--accent);
+    padding: 14px 24px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--dark);
+  }
+  .urgency-bar a {
+    color: var(--blue-dd);
+    text-decoration: underline;
+    font-weight: 800;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section { padding: 64px 24px; }
+  .section-inner { max-width: 880px; margin: 0 auto; }
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 800;
+    color: var(--blue-dd);
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    font-size: 17px;
+    color: var(--gray);
+    line-height: 1.6;
+    max-width: 620px;
+  }
+
+  /* ── PROBLEMAS ── */
+  .problemas { background: var(--lgray); }
+  .prob-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .prob-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px 20px;
+    border-left: 4px solid var(--blue);
+    box-shadow: 0 2px 8px rgba(10,122,191,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .prob-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(10,122,191,0.12); }
+  .prob-icon { font-size: 30px; margin-bottom: 10px; }
+  .prob-title { font-weight: 700; font-size: 15px; color: var(--blue-dd); margin-bottom: 4px; }
+  .prob-desc { font-size: 13px; color: var(--gray); line-height: 1.5; }
+
+  /* ── SERVIÇOS ── */
+  .servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .servico-card {
+    border: 2px solid var(--ice);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .servico-card:hover { border-color: var(--blue); box-shadow: 0 6px 24px rgba(10,122,191,0.1); }
+  .servico-card.featured {
+    border-color: var(--blue);
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  }
+  .feat-tag {
+    position: absolute;
+    top: 14px; right: -28px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 36px;
+    transform: rotate(45deg);
+  }
+  .serv-icon { font-size: 48px; margin-bottom: 14px; }
+  .serv-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--blue-dd);
+    margin-bottom: 10px;
+  }
+  .serv-items { list-style: none; text-align: left; }
+  .serv-items li {
+    font-size: 14px;
+    color: var(--gray);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(10,122,191,0.08);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .serv-items li:last-child { border-bottom: none; }
+  .serv-items li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+
+  /* ── DIFERENCIAIS ── */
+  .dif { background: var(--blue-dd); }
+  .dif .section-label { color: #7dc5ef; }
+  .dif .section-title { color: #fff; }
+  .dif .section-sub { color: #7dc5ef; }
+  .dif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .dif-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .dif-card:hover { background: rgba(255,255,255,0.1); }
+  .dif-icon { font-size: 36px; margin-bottom: 12px; }
+  .dif-title { font-weight: 700; font-size: 15px; color: #fff; margin-bottom: 6px; }
+  .dif-desc { font-size: 13px; color: #7dc5ef; line-height: 1.5; }
+
+  /* ── DEPOIMENTOS ── */
+  .dep { background: var(--lgray); }
+  .dep-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .dep-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(10,122,191,0.07);
+    position: relative;
+  }
+  .dep-stars {
+    color: var(--accent);
+    font-size: 18px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+  .dep-text {
+    font-size: 15px;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .dep-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .dep-avatar {
+    width: 40px; height: 40px;
+    background: var(--blue);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800;
+    color: #fff;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .dep-name { font-weight: 700; font-size: 14px; color: var(--blue-dd); }
+  .dep-source { font-size: 12px; color: var(--gray); }
+  .dep-quote {
+    position: absolute;
+    top: 18px; right: 20px;
+    font-size: 48px;
+    color: var(--ice);
+    line-height: 1;
+    font-family: Georgia, serif;
+  }
+
+  /* ── COBERTURA ── */
+  .cobertura { background: #fff; }
+  .cob-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 36px;
+    align-items: start;
+  }
+  @media(max-width:640px){ .cob-wrapper { grid-template-columns: 1fr; } }
+  .cob-map {
+    background: linear-gradient(135deg, var(--ice), #dbeafe);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    border: 2px solid #bae6fd;
+  }
+  .cob-map-icon { font-size: 56px; margin-bottom: 12px; }
+  .cob-map-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; color: var(--blue-dd); margin-bottom: 6px; }
+  .cob-map-sub { font-size: 14px; color: var(--gray); }
+  .cob-cities { margin-top: 20px; }
+  .cob-city {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--ice);
+    font-size: 15px;
+    color: var(--blue-dd);
+    font-weight: 600;
+  }
+  .cob-city:last-child { border-bottom: none; }
+  .cob-city .pin { font-size: 18px; }
+  .cob-bairros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .bairro-tag {
+    background: var(--ice);
+    color: var(--blue-d);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid #bae6fd;
+  }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    background: linear-gradient(135deg, var(--blue-dd), var(--blue-d));
+    padding: 70px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-final::before {
+    content: '🧊';
+    position: absolute;
+    font-size: 200px;
+    opacity: 0.04;
+    left: -30px;
+    bottom: -40px;
+    line-height: 1;
+  }
+  .cta-final::after {
+    content: '🧊';
+    position: absolute;
+    font-size: 160px;
+    opacity: 0.04;
+    right: -20px;
+    top: -20px;
+    line-height: 1;
+  }
+  .cta-final h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-final h2 em { font-style: normal; color: var(--accent); }
+  .cta-final p {
+    font-size: 17px;
+    color: #7dc5ef;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-final .btn-wa-lg {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--green-w);
+    color: #fff;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-final .btn-wa-lg:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(37,211,102,0.6); }
+  .cta-final .btn-wa-lg svg { width:26px; height:26px; fill:#fff; }
+  .cta-phone {
+    margin-top: 18px;
+    font-size: 16px;
+    color: #7dc5ef;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-phone strong { color: #fff; font-size: 20px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    padding: 28px 24px;
+    text-align: center;
+    color: #475569;
+    font-size: 13px;
+  }
+  footer strong { color: #94a3b8; }
+
+  /* WhatsApp SVG */
+  .wa-svg { display:inline-block; vertical-align:middle; }
+</style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="https://wa.me/5522998229249?text=Olá!%20Vi%20o%20anúncio%20e%20preciso%20de%20conserto%20de%20geladeira%20/%20câmara%20fria.%20Podem%20me%20ajudar?" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Chamar no WhatsApp
+</a>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  📍 Atendemos <strong>Cabo Frio, Armação dos Búzios e São Pedro da Aldeia</strong> · Técnico disponível hoje
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-block">
+    <div class="logo-icon">❄️</div>
+    <div class="logo-text">
+      AGB Refrigeração
+      <span>Cabo Frio · RJ</span>
+    </div>
+  </div>
+  <a class="header-cta" href="https://wa.me/5522998229249?text=Olá!%20Vi%20o%20anúncio%20e%20preciso%20de%20orçamento%20para%20conserto%20de%20geladeira%20/%20câmara%20fria." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Orçamento Grátis
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🔧 Técnico especializado · Atendimento rápido</div>
+  <h1>Conserto de Geladeira<br>e <em>Câmara Fria</em> em Cabo Frio</h1>
+  <p class="hero-sub">Geladeira parou de gelar? Câmara fria com problema? Técnico da AGB chega hoje. Orçamento grátis, serviço com garantia.</p>
+  <div class="hero-btns">
+    <a class="btn-wa" href="https://wa.me/5522998229249?text=Olá!%20Vi%20o%20anúncio%20e%20preciso%20de%20conserto%20de%20geladeira%20/%20câmara%20fria.%20Podem%20me%20ajudar?" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Chamar no WhatsApp Agora
+    </a>
+    <a class="btn-outline" href="tel:+5522998229249">📞 (22) 99822-9249</a>
+  </div>
+  <div class="hero-trust">
+    <span class="trust-item"><span class="icon">✅</span> Orçamento sem compromisso</span>
+    <span class="trust-item"><span class="icon">⚡</span> Técnico chega hoje</span>
+    <span class="trust-item"><span class="icon">🛡️</span> Garantia no serviço</span>
+    <span class="trust-item"><span class="icon">🌊</span> Proteção anti-maresia</span>
+
+  </div>
+</section>
+
+<!-- URGENCY -->
+<div class="urgency-bar">
+  ⚠️ Geladeira parada = alimentos estragando. <a href="https://wa.me/5522998229249?text=Urgente!%20Minha%20geladeira%20parou%20de%20gelar.%20Preciso%20de%20um%20técnico%20hoje." target="_blank">Chame agora e resolva hoje mesmo →</a>
+</div>
+
+<!-- PROBLEMAS -->
+<section class="section problemas">
+  <div class="section-inner">
+    <div class="section-label">Reconhece algum desses problemas?</div>
+    <h2 class="section-title">A AGB resolve tudo isso</h2>
+    <p class="section-sub">Identificamos o defeito e apresentamos o orçamento antes de começar qualquer serviço.</p>
+    <div class="prob-grid">
+      <div class="prob-card">
+        <div class="prob-icon">🌡️</div>
+        <div class="prob-title">Geladeira não gela</div>
+        <div class="prob-desc">Temperatura alta, alimentos estragando rápido, compressor não liga.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">💧</div>
+        <div class="prob-title">Vazando água</div>
+        <div class="prob-desc">Água no chão ou acumulando dentro da geladeira ou freezer.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">🔊</div>
+        <div class="prob-title">Barulho excessivo</div>
+        <div class="prob-desc">Ruídos estranhos, vibração ou compressor fazendo barulho alto.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">🧊</div>
+        <div class="prob-title">Gelo em excesso</div>
+        <div class="prob-desc">Freezer acumulando gelo rápido demais ou bloqueando a circulação de ar.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">🏭</div>
+        <div class="prob-title">Câmara fria com defeito</div>
+        <div class="prob-desc">Temperatura instável, vazamento de gás, compressor com falha.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">⚡</div>
+        <div class="prob-title">Não liga / trava</div>
+        <div class="prob-desc">Geladeira desligou do nada, painel travado ou falta de energia interna.</div>
+      </div>
+      <div class="prob-card" style="border-left-color:#f59e0b;">
+        <div class="prob-icon">🌊</div>
+        <div class="prob-title">Danos por maresia</div>
+        <div class="prob-desc">O ar úmido e salgado de Cabo Frio corrói serpentinas, contatos e peças metálicas acelerando defeitos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">O que a AGB faz</div>
+    <h2 class="section-title">Serviços de Refrigeração</h2>
+    <p class="section-sub">Atendemos desde a geladeira da sua casa até câmaras frias de supermercados, restaurantes e comércios em geral.</p>
+    <div class="servicos-grid">
+      <div class="servico-card featured">
+        <div class="feat-tag">Popular</div>
+        <div class="serv-icon">🏠</div>
+        <div class="serv-title">Geladeira Doméstica</div>
+        <ul class="serv-items">
+          <li>Conserto de todas as marcas</li>
+          <li>Troca de gás refrigerante</li>
+          <li>Substituição de compressor</li>
+          <li>Reparo de borracha de vedação</li>
+          <li>Limpeza do condensador</li>
+          <li>Desgelo e higienização</li>
+        </ul>
+      </div>
+      <div class="servico-card featured">
+        <div class="feat-tag">Comercial</div>
+        <div class="serv-icon">🏭</div>
+        <div class="serv-title">Câmara Fria & Freezer</div>
+        <ul class="serv-items">
+          <li>Diagnóstico e manutenção</li>
+          <li>Recarga e troca de gás</li>
+          <li>Reparo de condensador e evaporador</li>
+          <li>Troca de termostato e painel</li>
+          <li>Manutenção preventiva</li>
+          <li>Proteção anti-maresia nas peças</li>
+          <li>Atendimento emergencial</li>
+        </ul>
+      </div>
+      <div class="servico-card">
+        <div class="serv-icon">🥤</div>
+        <div class="serv-title">Outros Equipamentos</div>
+        <ul class="serv-items">
+          <li>Freezer horizontal e vertical</li>
+          <li>Balcão refrigerado</li>
+          <li>Bebedouro industrial</li>
+          <li>Máquina de gelo</li>
+          <li>Adega climatizada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="section dif">
+  <div class="section-inner">
+    <div class="section-label">Por que a AGB?</div>
+    <h2 class="section-title">Empresa local, compromisso de verdade</h2>
+    <p class="section-sub">Atendimento rápido, garantia no serviço e técnico especializado na região de Cabo Frio.</p>
+    <div class="dif-grid">
+      <div class="dif-card">
+        <div class="dif-icon">⚡</div>
+        <div class="dif-title">Técnico hoje</div>
+        <div class="dif-desc">Atendimento rápido. Na maioria dos casos o técnico chega no mesmo dia.</div>
+      </div>
+      <div class="dif-card">
+        <div class="dif-icon">💬</div>
+        <div class="dif-title">Orçamento grátis</div>
+        <div class="dif-desc">Diagnóstico sem custo. Você decide se aceita antes de qualquer serviço.</div>
+      </div>
+      <div class="dif-card">
+        <div class="dif-icon">🛡️</div>
+        <div class="dif-title">Garantia no serviço</div>
+        <div class="dif-desc">Todo serviço realizado pela AGB tem garantia. Qualidade que você pode confiar.</div>
+      </div>
+      <div class="dif-card">
+        <div class="dif-icon">🌊</div>
+        <div class="dif-title">Proteção anti-maresia</div>
+        <div class="dif-desc">Aplicamos tratamento anticorrosivo nas peças expostas. Essencial no clima úmido e salgado de Cabo Frio.</div>
+      </div>
+
+      <div class="dif-card">
+        <div class="dif-icon">💳</div>
+        <div class="dif-title">Pague no PIX</div>
+        <div class="dif-desc">Pagamento fácil via PIX, cartão ou combinado. Sem burocracia.</div>
+      </div>
+      <div class="dif-card">
+        <div class="dif-icon">📲</div>
+        <div class="dif-title">WhatsApp direto</div>
+        <div class="dif-desc">Fala direto com quem vai te atender. Sem call center, sem espera.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section dep">
+  <div class="section-inner">
+    <div class="section-label">Clientes reais</div>
+    <h2 class="section-title">O que dizem sobre a AGB</h2>
+    <p class="section-sub">Avaliações verificadas de clientes atendidos na região de Cabo Frio e Búzios.</p>
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="dep-quote">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-text">Capacitado, competente e educado. Resolveu com facilidade um problema onde outro instalador não teve a mesma capacidade. Agora sim estou de boa com o meu 'clima de montanha' funcionando!</p>
+        <div class="dep-author">
+          <div class="dep-avatar">FP</div>
+          <div>
+            <div class="dep-name">Fábio Paranhos</div>
+            <div class="dep-source">⭐ Google · Cabo Frio</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-quote">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-text">Foi muito satisfatório, ficou muito bom. Serviço rápido e profissional. Recomendo para quem precisa de um técnico de confiança na região.</p>
+        <div class="dep-author">
+          <div class="dep-avatar">GL</div>
+          <div>
+            <div class="dep-name">Gustavo Lobo</div>
+            <div class="dep-source">⭐ Google · Cabo Frio</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-quote">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-text">Minha geladeira parou de gelar e fiquei preocupada com os alimentos. Chamei a AGB e o técnico chegou no mesmo dia. Resolveu rápido e com preço justo. Muito satisfeita!</p>
+        <div class="dep-author">
+          <div class="dep-avatar">MR</div>
+          <div>
+            <div class="dep-name">Maria R.</div>
+            <div class="dep-source">⭐ Google · São Pedro da Aldeia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURA -->
+<section class="section cobertura">
+  <div class="section-inner">
+    <div class="section-label">Onde atendemos</div>
+    <h2 class="section-title">Área de Cobertura – Região dos Lagos</h2>
+    <p class="section-sub">Técnico da AGB atende na sua cidade, seja casa, apartamento ou comércio.</p>
+    <div class="cob-wrapper">
+      <div class="cob-map">
+        <div class="cob-map-icon">🗺️</div>
+        <div class="cob-map-title">Região dos Lagos · RJ</div>
+        <div class="cob-map-sub">Atendimento em toda a região</div>
+        <div class="cob-cities">
+          <div class="cob-city">
+            <span class="pin">📍</span>
+            <div>
+              <div>Cabo Frio</div>
+              <div class="cob-bairros">
+                <span class="bairro-tag">Centro</span>
+                <span class="bairro-tag">Braga</span>
+                <span class="bairro-tag">Praia do Forte</span>
+                <span class="bairro-tag">Algodoal</span>
+                <span class="bairro-tag">Foguete</span>
+                <span class="bairro-tag">Unamar</span>
+                <span class="bairro-tag">Tamoios</span>
+              </div>
+            </div>
+          </div>
+          <div class="cob-city">
+            <span class="pin">📍</span>
+            <div>
+              <div>Armação dos Búzios</div>
+              <div class="cob-bairros">
+                <span class="bairro-tag">Centro</span>
+                <span class="bairro-tag">Manguinhos</span>
+                <span class="bairro-tag">Ferradura</span>
+                <span class="bairro-tag">José Gonçalves</span>
+              </div>
+            </div>
+          </div>
+          <div class="cob-city">
+            <span class="pin">📍</span>
+            <div>
+              <div>São Pedro da Aldeia</div>
+              <div class="cob-bairros">
+                <span class="bairro-tag">Centro</span>
+                <span class="bairro-tag">Balneário</span>
+                <span class="bairro-tag">Fluminense</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="background:var(--blue-dd); border-radius:14px; padding:28px; color:#fff; margin-bottom:16px;">
+          <div style="font-size:36px; margin-bottom:10px;">📞</div>
+          <div style="font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:800; margin-bottom:6px;">Fale com a AGB agora</div>
+          <div style="font-size:28px; font-weight:800; color:var(--accent); margin-bottom:12px;">(22) 99822-9249</div>
+          <div style="font-size:14px; color:#7dc5ef; margin-bottom:18px;">Atendimento via WhatsApp · Segunda a Sábado</div>
+          <a href="https://wa.me/5522998229249?text=Olá!%20Vi%20o%20anúncio%20e%20preciso%20de%20orçamento%20para%20conserto%20de%20geladeira%20/%20câmara%20fria." target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:var(--green-w); color:#fff; font-weight:800; font-size:16px; padding:14px 20px; border-radius:10px; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='#1da851'" onmouseout="this.style.background='#25d366'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+
+        <div style="background:var(--lgray); border-radius:12px; padding:20px; border:2px dashed #bae6fd;">
+          <div style="font-weight:700; font-size:15px; color:var(--blue-dd); margin-bottom:10px;">⚡ Atendemos também:</div>
+          <div style="font-size:14px; color:var(--gray); line-height:2;">
+            Arraial do Cabo · Iguaba Grande · Araruama · São Bento da Lagoa · Região de Búzios
+          </div>
+          <div style="font-size:12px; color:var(--blue); margin-top:8px; font-weight:600;">Consulte disponibilidade pelo WhatsApp →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>Geladeira com problema?<br><em>Resolve hoje com a AGB.</em></h2>
+  <p>Técnico em Cabo Frio disponível agora. Orçamento grátis, sem compromisso.</p>
+  <a class="btn-wa-lg" href="https://wa.me/5522998229249?text=Olá!%20Vi%20o%20anúncio%20e%20preciso%20de%20conserto%20de%20geladeira%20/%20câmara%20fria.%20Podem%20me%20ajudar?" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Chamar no WhatsApp Agora
+  </a>
+  <div class="cta-phone">Ou ligue: <strong>(22) 99822-9249</strong></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>AGB Refrigeração</strong> · Cabo Frio, RJ · @agbservicos<br>
+  <span style="margin-top:6px; display:block;">Atendemos Cabo Frio · Armação dos Búzios · São Pedro da Aldeia e região</span>
+</footer>
+
+</body>
+</html>
